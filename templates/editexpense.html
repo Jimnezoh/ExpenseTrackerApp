@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Expense</title>
+</head>
+<body>
+<h4>Edit Expense</h4>
+ <form action="" method="post" class="container pt-3 pb-3 m-auto">
+                {% csrf_token %}
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="date">Date</label>
+                        <div>
+                            {{ form.date }}
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="time">Time</label>
+                        <div>
+                            {{ form.time }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="category">Category</label>
+                        <div>
+                            {{ form.category }}
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="amount">Amount</label>
+                        <div>
+                            {{ form.amount }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="description">Description</label>
+                        <div>
+                            <div>
+                                {{ form.description }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br><br>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+</body>
+</html>

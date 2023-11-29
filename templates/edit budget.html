@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Budget</title>
+
+     <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
+    <script src="{% static 'js/js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+<h4>Edit Budget</h4>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="row mb-3">
+        <div class="col-6">
+            <label for="name">Budget Name</label>
+            <div>
+                {{ form.name }}
+            </div>
+        </div>
+
+        <div class="col-6">
+            <label for="Amount">Budget Amount</label>
+            <div>
+                {{ form.Amount }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <label for="description">Description</label>
+            <div>
+                <div>
+                    {{ form.description }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+</body>
+</html>
